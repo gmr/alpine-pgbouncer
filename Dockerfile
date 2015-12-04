@@ -18,7 +18,8 @@ RUN \
   rm -rf /tmp/pgbouncer*  && \
   sed -i 's/logfile = \/var\/log\/pgbouncer\/pgbouncer.log/; logfile = \/var\/log\/pgbouncer\/pgbouncer.log/' /etc/pgbouncer/pgbouncer.ini && \
   apk del --purge autoconf autoconf-doc automake c-ares-dev curl gcc libc-dev libevent-dev libtool make man openssl-dev pkgconfig
+ADD start.sh /start.sh
 USER pgbouncer
 VOLUME /etc/pgbouncer
 EXPOSE 6432
-CMD /usr/bin/pgbouncer /etc/pgbouncer/pgbouncer.ini
+CMD /start.sh
