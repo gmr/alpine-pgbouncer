@@ -2,10 +2,10 @@ FROM gliderlabs/alpine:3.2
 
 RUN \
   apk --update add autoconf autoconf-doc automake c-ares c-ares-dev curl gcc libc-dev libevent libevent-dev libtool make man openssl-dev pkgconfig && \
-  curl -o  /tmp/pgbouncer-1.6.1.tar.gz -L https://pgbouncer.github.io/downloads/files/1.6.1/pgbouncer-1.6.1.tar.gz && \
+  curl -o  /tmp/pgbouncer-1.7.2.tar.gz -L https://pgbouncer.github.io/downloads/files/1.7.2/pgbouncer-1.7.2.tar.gz && \
   cd /tmp && \
-  tar xvfz /tmp/pgbouncer-1.6.1.tar.gz && \
-  cd pgbouncer-1.6.1 && \
+  tar xvfz /tmp/pgbouncer-1.7.2.tar.gz && \
+  cd pgbouncer-1.7.2 && \
   ./configure --prefix=/usr && \
   make && \
   cp pgbouncer /usr/bin && \
