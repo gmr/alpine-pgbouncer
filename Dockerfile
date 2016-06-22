@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.2
+FROM alpine:3.4
 
 RUN \
   apk --update add autoconf autoconf-doc automake c-ares c-ares-dev curl gcc libc-dev libevent libevent-dev libtool make man openssl-dev pkgconfig && \
