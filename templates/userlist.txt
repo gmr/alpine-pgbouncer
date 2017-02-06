@@ -1,0 +1,7 @@
+{% if PGB_USERLIST is defined %}
+{% set users = PGB_USERLIST.split(',') %}
+{% for user in users %}
+{% set user_split = user.split(':') %}
+"{{ user_split[0] }}" "{{ user_split[1] }}"
+{% endfor %}
+{% endif %}
